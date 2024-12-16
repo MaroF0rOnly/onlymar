@@ -54,14 +54,24 @@
             margin-bottom: 40px;
         }
 
-        .social-buttons a img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.2s ease-in-out;
+        .social-buttons a {
+            display: inline-block;
+            width: 180px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            border: 2px solid white; /* Non-transparent edges */
+            border-radius: 50px; /* Rounded edges */
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent center */
+            transition: all 0.3s ease-in-out;
         }
 
-        .social-buttons a img:hover {
-            transform: scale(1.1);
+        .social-buttons a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
         }
 
         /* Dancing GIF */
@@ -110,18 +120,10 @@
 
     <!-- Social Media Buttons -->
     <div class="social-buttons">
-        <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
-            <img src="instagram.png" alt="Instagram">
-        </a>
-        <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank">
-            <img src="tiktok.png" alt="TikTok">
-        </a>
-        <a href="https://discord.gg/YOUR_INVITE" target="_blank">
-            <img src="discord.png" alt="Discord">
-        </a>
-        <a href="https://spotify.com/YOUR_PROFILE" target="_blank">
-            <img src="spotify.png" alt="Spotify">
-        </a>
+        <a href="https://instagram.com/YOUR_USERNAME" target="_blank">Instagram</a>
+        <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank">TikTok</a>
+        <a href="https://discord.gg/YOUR_INVITE" target="_blank">Discord</a>
+        <a href="https://spotify.com/YOUR_PROFILE" target="_blank">Spotify</a>
     </div>
 
     <!-- Dancing GIF -->
