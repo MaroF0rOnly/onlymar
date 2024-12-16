@@ -24,39 +24,26 @@
         /* Full Page Background */
         body {
             background-image: url('background.png');
+            background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: 'Tan Buster', Arial, sans-serif;
             color: white;
             text-align: center;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
 
         /* Header Text */
         .header {
-            position: absolute;
-            top: 10%;
             font-size: 5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-
-        /* PC-Only Section */
-        .pc-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            max-width: 1200px;
-            position: absolute;
-            bottom: 10%;
-        }
-
-        .dancing-gif {
-            width: 200px;
+            margin-bottom: 40px;
         }
 
         /* Social Media Buttons */
@@ -64,6 +51,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            margin-bottom: 40px;
         }
 
         .social-buttons a img {
@@ -76,10 +64,42 @@
             transform: scale(1.1);
         }
 
-        /* Mobile Check */
+        /* Dancing GIF */
+        .gif-container img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* PC View: Content Flex Layout */
+        .pc-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            position: absolute;
+            bottom: 10%;
+        }
+
+        /* Mobile View */
         @media (max-width: 768px) {
-            .pc-content {
-                display: none;
+            body {
+                justify-content: flex-start;
+            }
+
+            .header {
+                font-size: 3rem;
+                margin-top: 20px;
+            }
+
+            .social-buttons {
+                margin-top: 30px;
+                gap: 15px;
+            }
+
+            .gif-container img {
+                margin-top: 20px;
+                width: 120px;
             }
         }
     </style>
@@ -88,28 +108,25 @@
     <!-- Header Section -->
     <div class="header">OnlyMar</div>
 
-    <!-- PC Content -->
-    <div class="pc-content">
-        <!-- Dancing GIF -->
-        <div class="gif-container">
-            <img src="fun.gif" alt="Dancing GIF" class="dancing-gif">
-        </div>
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank">
+            <img src="tiktok.png" alt="TikTok">
+        </a>
+        <a href="https://discord.gg/YOUR_INVITE" target="_blank">
+            <img src="discord.png" alt="Discord">
+        </a>
+        <a href="https://spotify.com/YOUR_PROFILE" target="_blank">
+            <img src="spotify.png" alt="Spotify">
+        </a>
+    </div>
 
-        <!-- Social Media Buttons -->
-        <div class="social-buttons">
-            <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
-                <img src="instagram.png" alt="Instagram">
-            </a>
-            <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank">
-                <img src="tiktok.png" alt="TikTok">
-            </a>
-            <a href="https://discord.gg/YOUR_INVITE" target="_blank">
-                <img src="discord.png" alt="Discord">
-            </a>
-            <a href="https://spotify.com/YOUR_PROFILE" target="_blank">
-                <img src="spotify.png" alt="Spotify">
-            </a>
-        </div>
+    <!-- Dancing GIF -->
+    <div class="gif-container">
+        <img src="fun.gif" alt="Dancing GIF">
     </div>
 </body>
 </html>
