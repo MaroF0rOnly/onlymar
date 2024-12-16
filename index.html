@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyMar</title>
+    <!-- CSS Style -->
+    <style>
+        /* Custom Font Import */
+        @font-face {
+            font-family: 'Tan Buster';
+            src: url('TanBuster.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full Page Background */
+        body {
+            background-image: url('background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Tan Buster', Arial, sans-serif;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Header Text */
+        .header {
+            position: absolute;
+            top: 10%;
+            font-size: 5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* PC-Only Section */
+        .pc-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            position: absolute;
+            bottom: 10%;
+        }
+
+        .dancing-gif {
+            width: 200px;
+        }
+
+        /* Social Media Buttons */
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social-buttons a img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .social-buttons a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Check */
+        @media (max-width: 768px) {
+            .pc-content {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">OnlyMar</div>
+
+    <!-- PC Content -->
+    <div class="pc-content">
+        <!-- Dancing GIF -->
+        <div class="gif-container">
+            <img src="fun.gif" alt="Dancing GIF" class="dancing-gif">
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div class="social-buttons">
+            <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank">
+                <img src="tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://discord.gg/YOUR_INVITE" target="_blank">
+                <img src="discord.png" alt="Discord">
+            </a>
+            <a href="https://spotify.com/YOUR_PROFILE" target="_blank">
+                <img src="spotify.png" alt="Spotify">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
